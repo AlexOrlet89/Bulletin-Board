@@ -1,5 +1,11 @@
 // import functions and grab DOM elements
+import { renderStickies } from './render-utils.js';
+import { getStickies } from './fetch-utils.js'; 
 
+window.addEventListener('load', async () => {
+    const stickies = await getStickies();
+    console.log(stickies);
+});
 // let state
 
 // set event listeners 

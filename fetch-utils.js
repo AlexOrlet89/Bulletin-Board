@@ -5,7 +5,7 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getStickies() {
     const response = await client.from(`Stickies`).select(`*`);
-    console.log(response);
+    console.log(checkError(response));
     return checkError(response);
 }
 
