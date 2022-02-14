@@ -5,6 +5,7 @@ import { getStickies } from './fetch-utils.js';
 window.addEventListener('load', async () => {
     const stickies = await getStickies();
     console.log(stickies);
+    console.log(renderStickies(stickies));
 });
 // let state
 
