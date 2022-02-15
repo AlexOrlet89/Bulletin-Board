@@ -1,4 +1,4 @@
-import { checkAuth } from '../fetch-utils.js';
+import { checkAuth, createSticky } from '../fetch-utils.js';
 
 checkAuth();
 
@@ -14,4 +14,4 @@ createForm.addEventListener('submit', async (e) => {
     console.log(title.value);
     //a function that takes .values 
     createSticky(title.value, description.value, contactInfo.value);
-})
+});
