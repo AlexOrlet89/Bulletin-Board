@@ -18,3 +18,13 @@ export async function signupUser(email, password) {
     console.log(response, 'working!');
     return response.user;
 }
+
+export function getUser() {
+    return client.auth.session() && client.auth.session().user;
+}
+
+export async function redirectIfLoggedIn() {
+    if (getUser()) {
+        location.replace('../');
+    }
+}
