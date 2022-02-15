@@ -38,3 +38,8 @@ export async function signInUser(email, password) {
 export async function logout() {
     await client.auth.signOut();
 }
+
+export async function checkAuth() {
+    const user = getUser();
+    if (!user) location.replace('../');
+}
