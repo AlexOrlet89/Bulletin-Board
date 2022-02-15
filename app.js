@@ -5,9 +5,18 @@ import { getStickies } from './fetch-utils.js';
 window.addEventListener('load', async () => {
     const stickies = await getStickies();
     console.log(stickies);
-    console.log(renderStickies(stickies));
+    renderStickies(stickies);
 });
-// let state
+// 
+const logIn = document.getElementById('logIn');
+const create = document.getElementById('logIn');
+const logOut = document.getElementById('logIn');
+
+logIn.addEventListener('click', () => {
+    location.replace('./log-in-page');
+});
+
+// Our check Auth should have something like if (user === true) login.textcontent = 'log out', and add if (user === true, log out) in our log-in click listener.
 
 // set event listeners 
   // get user input
