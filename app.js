@@ -2,8 +2,8 @@
 import { renderStickies } from './render-utils.js';
 import { getStickies, getUser, logout } from './fetch-utils.js'; 
 const logIn = document.getElementById('logIn');
-const create = document.getElementById('logIn');
-const logOut = document.getElementById('logIn');
+const create = document.getElementById('create');
+// const logOut = document.getElementById('logIn'); no longer needed
 
 window.addEventListener('load', async () => {
     const stickies = await getStickies();
@@ -19,6 +19,15 @@ logIn.addEventListener('click', () => {
     if (getUser()) {
         logout();
         location.replace('.');
+    } else {
+        location.replace('./log-in-page');
+    }
+});
+
+create.addEventListener('click', () =>{
+    console.log('clicked');
+    if (getUser()) {
+        location.replace('./create');
     } else {
         location.replace('./log-in-page');
     }
