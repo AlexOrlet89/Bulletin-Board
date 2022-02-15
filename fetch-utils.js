@@ -24,7 +24,13 @@ export function getUser() {
 }
 
 export async function redirectIfLoggedIn() {
+    console.log('redirect called');
     if (getUser()) {
         location.replace('../');
-    }
+    } else alert('Redirect ERROR');
+}
+
+export async function signInUser(email, password) {
+    const response = await client.auth.signIn({ email, password });
+    return response.user;
 }
