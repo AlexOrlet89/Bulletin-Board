@@ -13,3 +13,8 @@ function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
 
+export async function signupUser(email, password) {
+    const response = await client.auth.signUp({ email, password });
+    console.log(response, 'working!');
+    return response.user;
+}
