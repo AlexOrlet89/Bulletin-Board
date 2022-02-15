@@ -1,18 +1,24 @@
 // import functions and grab DOM elements
 import { renderStickies } from './render-utils.js';
-import { getStickies } from './fetch-utils.js'; 
+import { getStickies, getUser } from './fetch-utils.js'; 
+const logIn = document.getElementById('logIn');
+const create = document.getElementById('logIn');
+const logOut = document.getElementById('logIn');
 
 window.addEventListener('load', async () => {
     const stickies = await getStickies();
     console.log(stickies);
     renderStickies(stickies);
+    if (getUser()) {
+        logIn.textContent = `Log Out`;
+    }
 });
 // 
-const logIn = document.getElementById('logIn');
-const create = document.getElementById('logIn');
-const logOut = document.getElementById('logIn');
 
 logIn.addEventListener('click', () => {
+    if (getUser()) {
+      
+    }
     location.replace('./log-in-page');
 });
 
