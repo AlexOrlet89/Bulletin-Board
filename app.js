@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 import { renderStickies } from './render-utils.js';
-import { getStickies, getUser } from './fetch-utils.js'; 
+import { getStickies, getUser, logout } from './fetch-utils.js'; 
 const logIn = document.getElementById('logIn');
 const create = document.getElementById('logIn');
 const logOut = document.getElementById('logIn');
@@ -17,9 +17,11 @@ window.addEventListener('load', async () => {
 
 logIn.addEventListener('click', () => {
     if (getUser()) {
-      
+        logout();
+        location.replace('.');
+    } else {
+        location.replace('./log-in-page');
     }
-    location.replace('./log-in-page');
 });
 
 // Our check Auth should have something like if (user === true) login.textcontent = 'log out', and add if (user === true, log out) in our log-in click listener.
