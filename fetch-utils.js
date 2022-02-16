@@ -5,9 +5,9 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function createSticky(title, description, contact) {
     const response = await client.from('Stickies').insert([
-        { Title: `${title}` },
-        { Description : `${description}` },
-        { Contact: `${contact}` },
+        { Title: `${title}`,
+            Description : `${description}`,
+            Contact: `${contact}` }
     ]);
     console.log('createSticky', title, description, contact);
     return checkError(response);

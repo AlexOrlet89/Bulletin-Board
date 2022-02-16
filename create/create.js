@@ -13,5 +13,11 @@ createForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     console.log(title.value);
     //a function that takes .values 
-    createSticky(title.value, description.value, contactInfo.value);
+    await createSticky(title.value, description.value, contactInfo.value);
+    title.value = '';
+    description.value = '';
+    contactInfo.value = '';
+    window.alert(`POSTED!`);
+    location.replace('../'); 
+    // why does this prevent supabase from recieving data from createSticky?
 });
