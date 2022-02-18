@@ -1,4 +1,3 @@
-import { getStickies } from './fetch-utils.js';
 //renderSticky will create a div to attach to 'corkboard', the div will have a h3 title, a p description and a label contact. 
 export function renderStickies(stickies) {
     const corkboard = document.getElementById('corkboard');
