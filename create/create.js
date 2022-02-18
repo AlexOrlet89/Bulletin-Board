@@ -9,6 +9,10 @@ const contactInfo = document.getElementById('contact');
 // const submit = document.getElementById('submit'); using form.
 const cancel = document.getElementById('cancel');
 
+cancel.addEventListener('click', ()=> {
+    location.replace('../');
+});
+
 createForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     console.log(title.value);
