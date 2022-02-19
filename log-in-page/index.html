@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <title>Document</title>
 </head>
-<body>
-    <div class="left">
-        <h4>Sign In</h4>
-        <form id="sign-in">
-            <label>Email</label>
-            <input id="Email">
-            <label>Password</label>
-            <input id="Password">
-            <button>Submit</button>
-        </form>
+<body class="centerme">
+    <section>
 
+        <div class="left">
+            <h4>Sign In</h4>
+            <form id="sign-in">
+                <label>Email</label>
+                <input id="Email">
+                <label>Password</label>
+                <input id="Password">
+                <button>Submit</button>
+            </form>
+            
     </div>
     <div class="gutter-right">
         <h4>Sign up</h4>
@@ -28,10 +33,11 @@
             <input id="newPassword">
             <button>Submit</button>
         </form>
-
+        
     </div>
-
-
+</section>
+    
+    
     <script src="./log-in.js" type="module"></script>
 </body>
 </html>

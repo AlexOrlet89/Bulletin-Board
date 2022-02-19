@@ -3,4 +3,31 @@
     border: black 2px solid;
     text-align: center;
     padding-bottom: 5px;
+    margin: var(--gutter);
+    background-color: var(--color5)
+}
+
+.centerme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cancel {
+    width: 170px;
+}
+
+.left {
+
+}
+
+#description{
+    height: 50px;
+}
+#create {
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
