@@ -1,10 +1,11 @@
 
 body {
+    background-image: url('/assets/D1028_7_464_1200.jpg');
     /* feel free to update these css variables for a quick theme */
     
     --color1: white;
     --color2: white;
-    --color3: white;
+    --color3: rgb(187, 0, 0);
     --color4: white;
     --color5: white;
     
@@ -31,7 +32,10 @@ body {
     background-color: var(--color2);
 }
 
+
+
 main {
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +44,8 @@ main {
 }
 
 section {
-    background-color: var(--color5);
+    background-color: aliceblue;
+    width: 45%;
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -49,18 +54,23 @@ section {
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
 
 header {
+    margin-bottom: var(--gutter);
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-content: center;
     background-color: var(--color3);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    align-items: center;
+    /* box-shadow: var(--shadow); */
 }
 
+h4 {
+    text-align: center;
+}
 
 h2 {
     font-size: 1.8rem;

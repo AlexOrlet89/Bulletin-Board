@@ -1,3 +1,8 @@
+Start with main page
+  getting our post its to show.
+  fetch-utils to get data from our table to send to render functions
+  
+
 ## The Golden Rule: 
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
