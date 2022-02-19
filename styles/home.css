@@ -1,1 +1,6 @@
 /* add home page styles here */
+#corkboard div {
+    border: black 2px solid;
+    text-align: center;
+    padding-bottom: 5px;
+}

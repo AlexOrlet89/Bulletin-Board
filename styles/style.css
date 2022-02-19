@@ -32,6 +32,7 @@ body {
 }
 
 main {
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,16 +50,18 @@ section {
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
 
 header {
+    margin-bottom: var(--gutter);
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-content: center;
     background-color: var(--color3);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    align-items: center;
+    /* box-shadow: var(--shadow); */
 }
 
 
